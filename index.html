@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Bryan Nuñez</title>
+    <title>WDD 131: Dynamic Web Fundamentals - Bryan Nuñez</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Bryan Nuñez - Home page showcasing web development projects and assignments including HTML, CSS, and JavaScript implementations.">
+    <meta name="author" content="Bryan Nuñez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Bryan Nuñez</h1>
+    <header>
+        <h1><span id="course-title">WDD 131: Dynamic Web Fundamentals</span></h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/bryanunez-ai/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p21#p21">Scripture</a></li>
+                <li><a href="index.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="name">Bryan Nuñez</h1>
+
+        <div class="content-wrapper">
+            <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <div class="card-text">
+                    <p>My name is Bryan. I am from Cancún, México. I enjoy to spend time with my family and friends, specially outdoors and surrounded by nature. I love doing kayaking. I just got married on December 2025 and I'm of starting my journey in life next to my wife.</p>
+                    <br>
+                    <p>I currently work in a transportation agency in Cancún at the operations department.</p>
+                </div>
+                <div class="card-image">
+                    <img src="images/me.jpg" alt="Bryan Nuñez" loading="lazy">
+                </div>
+            </div>
+
+            <h3>Cancún, México</h3>
+            <div class="location-content">
+                <div class="location-image">
+                    <img src="images/mexico-flag.jpg" alt="Flag of Mexico" loading="lazy">
+                    <p class="flag-caption">Official Flag of Mexico</p>
+                </div>
+                <div class="location-text">
+                    <p>Cancún is one of the most touristic destinations in the world. We received 28 million tourists last year. Mexico is known for its beautiful beaches, rich culture, and warm hospitality.</p>
+                </div>
+            </div>
+            </section>
+
+            <aside class="card">
+                <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
+                </ul>
+            </aside>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Bryan Nuñez, Cancún, México. 🌴</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

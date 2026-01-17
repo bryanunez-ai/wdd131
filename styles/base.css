@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background-color: #22abb8;
+  padding: 1.5rem 0 0 0;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  padding: 1rem;
+}
+
+#name {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+
+.quantico-regular-italic {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.quantico-bold-italic {
+  font-family: "Quantico", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#course-title {
+  display: block;
+  text-align: center;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #22abb8;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style-position: inside;
+  line-height: 1.8;
+}
+
+.card a {
+  color: #22abb8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #1a8a94;
+  text-decoration: underline;
+}
+
+.card-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-image {
+  flex-shrink: 0;
+}
+
+.card-image img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.location-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.location-image {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.location-image img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+.location-text {
+  flex: 1;
+}
+
+.flag-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Responsive layout for cards */
+@media (max-width: 639px) {
+  .card-content,
+  .location-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-image img,
+  .location-image img {
+    max-width: 100%;
+  }
+}
+
+nav {
+	background-color: #1a8a94;
+}
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+	background-color: #fff;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+nav a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background-color: #22abb8;
+	transition: width 0.3s ease;
+}
+
+nav a:hover {
+	color: #22abb8;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+
+.active {
+	color: yellow;
+}
+
+footer {
+	background-color: #1a8a94;
+	color: #fff;
+	text-align: center;
+	padding: 1.5rem;
+	margin-top: 2rem;
+}
+
+footer p {
+	margin: 0.5rem 0;
+}
+
+footer #currentyear {
+	margin-left: 0.25rem;
+}
+
+/* larger/wider views **************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+
+	nav ul li {
+		flex: 1 0 auto; /* flex: [flex-grow] [flex-shrink] [flex-basis];
+		in this example, the items will not shrink but can grow to fill the space at natural content width*/
+	}
+
+	.content-wrapper {
+		grid-template-columns: 2fr 1fr;
+	}
+}
