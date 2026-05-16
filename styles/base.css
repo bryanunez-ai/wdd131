@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0fafa;
+    color: #1a1a2e;
+}
+
+header {
+    background-color: #006d77;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#course-title {
+    display: block;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #004f58;
+    padding: 0.75rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Quantico', sans-serif;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #006d77;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #004f58;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-family: 'Quantico', sans-serif;
+}
+
+footer a {
+    color: #a8d8d8;
+}
+
+
+
+/* Cards */
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #b2dfdb;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: #006d77;
+    color: white;
+    font-family: 'Quantico', sans-serif;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+.card p, .card a {
+    padding: 0.75rem 1rem;
+    display: block;
+    line-height: 1.6;
+}
+
+.card img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.card p {
+    color: #1a1a2e;
+}
+
+#me {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.75rem;
+}
+
+#me img {
+    width: 150px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+#me p {
+    padding: 0;
+}
+
+.card a {
+    color: #006d77;
+    font-weight: 600;
+}
+
+.card a:hover {
+    color: #004f58;
+    text-decoration: underline;
+}
+
+.card h3 {
+    font-family: 'Quantico', sans-serif;
+    padding: 0.5rem 1rem;
+    color: #004f58;
+    border-bottom: 1px solid #b2dfdb;
+}
+
+#me + div {
+    border-top: 1px solid #b2dfdb;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}

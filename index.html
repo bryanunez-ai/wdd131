@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Bryan Nuñez</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Bryan Nuñez</title>
+    <meta name="description" content="The WDD 131 – Dynamic Web Fundamentals home page of projects by Bryan Nuñez.">
+    <meta name="author" content="Bryan Nuñez">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>Bryan Nuñez</h1>
-    <h2>Hello World!</h2> 
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/bryanunez-ai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng&id=p15#p15" target="_blank" rel="noopener noreferrer">Scripture</a>
+            <a href='#'>Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bryan Nuñez</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <div id="me">
+                <p>My name is Bryan Nuñez. I'm from Cancún, Quintana Roo, México. I'm passioned about technology and web development. I love to learn and develop new skills. I enjoy spending time with my family and my friends.</p>
+
+                <img src="images/me.png" alt="Bryan Nuñez portrait picture">
+            </div>
+
+            <div>
+                <h3>Cancún, Quintana Roo, Mexico</h3>
+                <img src="images/cancun.jpg" alt="Cancun Panoramic picture">
+                <p>Quintana Roo is a beutiful state in México sourrounded by nature, culture and the best beaches in the World. In February, Isla Pasión, a small island, was rated as the best beach in the world in 2026 by Travellers' Choice Awards: Best of the Best Beaches. Cancun goes head-to-head with historical giants. It has been repeatedly ranked by the consulting firm ForwardKeys and the WTTC (World Travel & Tourism Council) among the top 3 most resilient and visited tourist destinations in the world, surpassing entire cities like Paris, London, or Las Vegas in international tourist volume during key seasons.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <a href="https://www.w3schools.com">W3 Schools</a>
+            <a href="https://byui-cse.github.io/cse-ww-program/student/dev-standards.html">BYU WDD Front Dev Standars</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Bryan Nuñez | Cancún, Quintana Roo, México</p>
+
+        <p id="lastModified"></p>
+
+    </footer>
 </body>
 </html>
