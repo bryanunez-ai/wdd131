@@ -102,33 +102,3 @@ footer {
     margin-top: 2rem;
     font-family: 'Quantico', sans-serif;
 }
-
-@media screen and (min-width: 640px) {
-
-    header {
-    flex-wrap: nowrap;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        background-color: transparent;
-        padding: 0;
-    }
-
-    nav a {
-        padding: 0.25rem 0.75rem;
-        border-radius: 4px;
-    }
-
-    #hamburger {
-        display: none;
-    }
-
-    main {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-
-}
