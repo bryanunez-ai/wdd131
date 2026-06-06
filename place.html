@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – México – Bryan Nuñez</title>
+    <meta name="description" content="Country page about México for WDD 131 – Dynamic Web Fundamentals by Bryan Nuñez.">
+    <meta name="author" content="Bryan Nuñez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>México</h1>
+    </header>
+    <picture class="hero-image">
+        <source media="(min-width: 48rem)" srcset="images/mexico-large.webp">
+        <img src="images/mexico-small.webp" alt="Landscape view of México">
+    </picture>
+    <section class="card">
+        <h2>Data</h2>
+        <table>
+            <tr>
+                <th>Area:</th>
+                <td>1,964,375 sq km</td>
+            </tr>
+            <tr>
+                <th>Population:</th>
+                <td>129,875,529</td>
+            </tr>
+            <tr>
+                <th>Capital:</th>
+                <td>Ciudad de México</td>
+            </tr>
+            <tr>
+                <th>Languages:</th>
+                <td>Spanish and 68 indigenous with their 368 variants</td>
+            </tr>
+            <tr>
+                <th>Currency:</th>
+                <td>Mexican Peso</td>
+            </tr>
+            <tr>
+                <th>Time Zone:</th>
+                <td>UTC-6</td>
+            </tr>
+            <tr>
+                <th>Calling Code:</th>
+                <td>+52</td>
+            </tr>
+            <tr>
+                <th>Internet TLD:</th>
+                <td>.mx</td>
+            </tr>
+        </table>
+    </section>
+    <section class="card weather">
+        <h2>Weather</h2>
+        <img class="weather-icon" src="images/weather.svg" alt="Partly cloudy weather icon">
+        <table>
+            <tr>
+                <th>Temperature:</th>
+                <td>10&deg;C</td>
+            </tr>
+            <tr>
+                <th>Conditions:</th>
+                <td>Partly Cloudy</td>
+            </tr>
+            <tr>
+                <th>Wind:</th>
+                <td>5 km/h</td>
+            </tr>
+            <tr>
+                <th>Wind Chill:</th>
+                <td id="windchill"></td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Bryan Nuñez - México</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

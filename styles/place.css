@@ -1,0 +1,166 @@
+/* ===== Global variables ===== */
+:root {
+    /* México flag palette */
+    --flag-green: #006847;
+    --flag-red: #ce1126;
+    --white: #ffffff;
+
+    --text-dark: #1a1a2e;
+    --bg-light: #f4f4f4;
+    --card-bg: #ffffff;
+
+    /* Typography */
+    --heading-font: 'Audiowide', sans-serif;
+    --accent-font: 'Quantico', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--flag-red);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 8px solid var(--flag-green);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
+/* ===== Hero image ===== */
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ===== Cards ===== */
+.card {
+    background-color: var(--card-bg);
+    margin: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* ===== Data / Weather tables ===== */
+.card table {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.card th {
+    text-align: right;
+    width: 50%;
+    padding: 0.35rem 0.75rem;
+    font-family: var(--accent-font);
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.card td {
+    text-align: left;
+    padding: 0.35rem 0.75rem;
+    vertical-align: top;
+}
+
+/* ===== Weather icon (SVG) — mobile view ===== */
+.weather-icon {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--flag-red);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    font-family: var(--accent-font);
+    line-height: 1.6;
+}
+
+/* ===== Large / desktop view ===== */
+@media (min-width: 48rem) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        grid-column: 1 / -1;
+    }
+
+    /* Hero fills the middle row; cards overlap it */
+    .hero-image {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .hero-image img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card {
+        grid-row: 2;
+        z-index: 1;
+        max-width: 360px;
+        margin: 2rem;
+        background-color: rgba(255, 255, 255, 0.92);
+    }
+
+    /* Data card: top-left */
+    .card:not(.weather) {
+        grid-column: 1;
+        justify-self: start;
+        align-self: start;
+    }
+
+    /* Weather card: bottom-right */
+    .weather {
+        grid-column: 2;
+        justify-self: end;
+        align-self: end;
+    }
+
+    /* Hide the SVG; show the emoji after the heading instead */
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    footer {
+        grid-column: 1 / -1;
+    }
+}
