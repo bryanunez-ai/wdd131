@@ -58,6 +58,11 @@ label {
     font-weight: 700;
 }
 
+.required {
+    color: #c0392b;
+    font-weight: 700;
+}
+
 .optional {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
