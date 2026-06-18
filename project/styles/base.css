@@ -247,3 +247,23 @@ footer a {
     color: var(--pacific-blue);   /* link visible sobre fondo oscuro */
 }
 
+/* SITES FILE */
+
+.fav-btn {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-accent);
+    font-size: 0.9rem;
+    color: var(--rich-mahogany);
+    background-color: transparent;
+    border: 2px solid var(--sea-green);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.fav-btn:hover {
+    background-color: var(--sea-green);
+    color: white;
+}

@@ -39,11 +39,10 @@ const sites = [
 
 // GET REGIONS AND ADD THEM TO FILTER IN DOM
 
+const regionFilter = document.getElementById("region-filter");
 
-function displayRegionOptions () {
+function displayRegionOptions (regionFilter) {
     const regions = [...new Set(sites.map(site => site.region))];
-
-    const regionFilter = document.getElementById("region-filter");
 
     const optionsHTML = regions.map(region =>
         `<option value="${region}">${region}</option>`
@@ -52,7 +51,42 @@ function displayRegionOptions () {
     regionFilter.insertAdjacentHTML("beforeend", optionsHTML);
 }
 
-displayRegionOptions();
+displayRegionOptions(regionFilter);
+
+// GET FAVORITES
+function getFavorites() {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
+function saveFavorites(favorites) {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+const sitesContainer = document.getElementById("sites-container");
+
+sitesContainer.addEventListener("click", (event) => {
+    if (!event.target.classList.contains("fav-btn")) return;
+
+    const name = event.target.dataset.name;
+    let favorites = getFavorites();
+
+    if (favorites.includes(name)) {
+        favorites = favorites.filter(fav => fav !== name);
+    } else {
+        favorites.push(name);
+    }
+
+    saveFavorites(favorites);
+    updateFavButtons();
+});
+
+function updateFavButtons() {
+    const favorites = getFavorites();
+    document.querySelectorAll(".fav-btn").forEach(btn => {
+        const isFav = favorites.includes(btn.dataset.name);
+        btn.textContent = isFav ? "★ Saved" : "☆ Save";
+    });
+}
 
 // ADD SITE CARDS TO DOM
 function displaySites(list) {
@@ -62,29 +96,42 @@ function displaySites(list) {
             <img src="${site.image}" alt="${site.alt}" loading="lazy">
             <h3>${site.name}</h3>
             <p>${site.description}</p>
+            <button class="fav-btn" data-name="${site.name}">☆ Save</button>
         </div>`
     ).join("");
 
     container.innerHTML = cardsHTML;
+    updateFavButtons();
 }
 
 displaySites(sites);
 
 // FILTER SITE CARDS BY REGION
-function filterCardsByReg() {
-    const regionFilter = document.getElementById("region-filter");
-
+function filterCards(regionFilter) {
     regionFilter.addEventListener("change", () => {
         const selected = regionFilter.value;
 
         if (selected === "all") {
             displaySites(sites);
+        } else if (selected === "favorites") {
+            
+            const favorites = getFavorites();
+            const favSites = sites.filter(site => favorites.includes(site.name));
+
+            if (favSites.length === 0) {
+                
+                const container = document.getElementById("sites-container");
+
+                container.innerHTML =`<p style="text-align:center"><strong>You haven't saved any sites yet.</strong></p>`;
+
+            } else {
+                displaySites(favSites);
+            }
         } else {
             const filteredSites = sites.filter(site => site.region === selected);
-
             displaySites(filteredSites);
         }
     });
 }
 
-filterCardsByReg();
+filterCards(regionFilter);
