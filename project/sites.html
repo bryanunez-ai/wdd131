@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the main Maya archaeological sites you can visit, filter them by region, and save your favorites.">
+    <meta name="author" content="Bryan Nuñez">
+    <title>Mayan Legacy – Sites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/sites.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link"><img src="images/logo.webp" alt="Mayan Legacy logo"><span class="logo">Mayan Legacy</span></a>
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="form.html">Plan Your Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="index-section">
+            <h1>Archaeological Sites</h1>
+            <p>Explore the main Maya archaeological sites you can visit. Filter them by region and save the ones you would like to visit.</p>
+
+            <div class="filter-bar">
+                <label for="region-filter">Filter by region:</label>
+                <select id="region-filter">
+                    <option value="all">All regions</option>
+                </select>
+            </div>
+
+            <div id="sites-container" class="index-section-grid"></div>
+        </section>
+    </main>
+    <footer id="site-footer">
+        <p>&copy;<span id="currentyear"></span> Mayan Legacy — Bryan Nuñez</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

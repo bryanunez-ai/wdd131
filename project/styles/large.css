@@ -1,0 +1,27 @@
+@media (min-width: 640px) {
+    
+    #hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;              /* siempre visible */
+        flex-direction: row;        /* en fila, no apilado */
+        width: auto;                /* ya no ocupa todo el ancho */
+        gap: 1rem;
+    }
+
+    .discoveries-section-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sites-section-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+}
+

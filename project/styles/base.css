@@ -23,6 +23,10 @@ body {
     line-height: 1.6;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 h1 {
     font-family: var(--font-heading);
 }
@@ -60,6 +64,8 @@ nav {
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
+    position: relative;
+    z-index: 101;
 }
 
 .logo-link img {
@@ -78,6 +84,8 @@ nav {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    position: relative;
+    z-index: 101; 
 }
 
 .menu {
@@ -89,7 +97,41 @@ nav {
 
 .menu.open {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pacific-blue);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5rem;
+    z-index: 100;
+    animation: fadeIn 0.25s ease;
 }
+
+.menu.open.closing {
+    animation: fadeOut 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+.menu.open a {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 
 .menu a {
     display: block;
@@ -97,6 +139,11 @@ nav {
     color: white;
     text-decoration: none;
     font-family: var(--font-accent);
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--rusty-spice);
 }
 
 /* HERO */
@@ -152,3 +199,51 @@ nav {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 2;
 }
+
+/* DISCOVERIES SECTION */
+.index-section {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.index-section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.index-section-grid-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.index-section-grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.index-section-grid-item h3 {
+    padding: 1rem 1rem 0;
+}
+
+.index-section-grid-item p {
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--rich-mahogany);   /* fondo oscuro de marca */
+    color: var(--antique-white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+footer a {
+    color: var(--pacific-blue);   /* link visible sobre fondo oscuro */
+}
+
