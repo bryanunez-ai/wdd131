@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/footer.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo-link"><img src="images/logo.png" alt="Mayan Legacy logo"><span class="logo">Mayan Legacy</span></a>
+            <a href="index.html" class="logo-link"><img src="images/logo.webp" alt="Mayan Legacy logo"><span class="logo">Mayan Legacy</span></a>
+            <button id="hamburger" aria-label="Togle navigation menu">&#9776;</button>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sites.html">Sites</a></li>
@@ -25,9 +27,11 @@
         </nav>
         <div id="hero">
             <img src="images/hero_bonampak.webp" alt="Maya murals in Bonampak">
-            <h1>Mayan Legacy</h1>
-            <p class="hero-subtitle">Discover the Maya culture and plan your trip</p>
-            <p class="tagline">Discover. Plan. Travel.</p>
+            <div class="hero-text-box">
+                <h1>Mayan Legacy</h1>
+                <p class="hero-subtitle">Discover the Maya culture and plan your trip</p>
+                <p class="tagline">Discover. Plan. Travel.</p>
+            </div>
         </div>
     </header>
     <main>
