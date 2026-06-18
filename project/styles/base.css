@@ -1,5 +1,6 @@
 :root {
     --pacific-blue: #2bb8c6;
+    --header-blue: #0f6e79;
     --rusty-spice: #be2e04;
     --sea-green: #00884b;
     --antique-white: #f4e5d1;
@@ -48,7 +49,7 @@ img {
 
 /* HEADER AND NAV */
 header {
-    background-color: var(--pacific-blue);
+    background-color: var(--header-blue);
 }
 
 nav {
@@ -102,7 +103,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--pacific-blue);
+    background-color: var(--header-blue);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -143,7 +144,8 @@ nav {
 }
 
 .menu a:hover {
-    color: var(--rusty-spice);
+    color: var(--antique-white);
+    text-decoration: underline;
 }
 
 /* HERO */
