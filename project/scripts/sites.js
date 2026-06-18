@@ -122,7 +122,7 @@ function filterCards(regionFilter) {
                 
                 const container = document.getElementById("sites-container");
 
-                container.innerHTML =`<p style="text-align:center"><strong>You haven't saved any sites yet.</strong></p>`;
+                container.innerHTML = `<p class="empty-message"><strong>You haven't saved any sites yet.</strong></p>`;
 
             } else {
                 displaySites(favSites);

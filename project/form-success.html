@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your visit plan to the Maya archaeological sites has been received. Thank you for planning with Mayan Legacy.">
+    <meta name="author" content="Bryan Nuñez">
+    <title>Mayan Legacy – Plan Received</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/form-success.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link"><img src="images/logo.webp" alt="Mayan Legacy logo"><span class="logo">Mayan Legacy</span></a>
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="form.html">Plan Your Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="form-page">
+        <div class="confirmation">
+            <h1>Thank You!</h1>
+            <p id="confirm-message"></p>
+            <h2>Trip Details</h2>
+            <ul id="plan-details"></ul>
+            <p class="counter">Total visit plans submitted: <strong id="plan-count"></strong></p>
+            <a class="cta-link" href="sites.html">Explore more sites</a>
+        </div>
+    </main>
+    <footer id="site-footer">
+        <p>&copy;<span id="currentyear"></span> Mayan Legacy — Bryan Nuñez</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

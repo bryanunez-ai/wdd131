@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your visit to the Maya archaeological sites: choose a site, pick a date, and tell us your interests.">
+    <meta name="author" content="Bryan Nuñez">
+    <title>Mayan Legacy – Plan Your Visit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link"><img src="images/logo.webp" alt="Mayan Legacy logo"><span class="logo">Mayan Legacy</span></a>
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="form.html">Plan Your Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="form-page">
+        <h1>Plan Your Visit</h1>
+        <p class="form-intro">Tell us about your dream trip to the Maya world and we will help you plan it.</p>
+
+        <form method="get" action="form-success.html">
+            <div class="field">
+                <label for="fullname">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="field">
+                <label for="site">Site to Visit <span class="required">*</span></label>
+                <select id="site" name="site" required>
+                    <option value="" disabled selected>Select a site ...</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="visitdate">Visit Date <span class="required">*</span></label>
+                <input type="date" id="visitdate" name="visitdate" required>
+            </div>
+
+            <fieldset class="field">
+                <legend>Interests <span class="optional">(check all that apply)</span></legend>
+                <label class="checkbox-label" for="archaeology">
+                    <input type="checkbox" id="archaeology" name="interests" value="archaeology">
+                    Archaeology &amp; Ruins
+                </label>
+                <label class="checkbox-label" for="photography">
+                    <input type="checkbox" id="photography" name="interests" value="photography">
+                    Photography
+                </label>
+                <label class="checkbox-label" for="history">
+                    <input type="checkbox" id="history" name="interests" value="history">
+                    History &amp; Culture
+                </label>
+                <label class="checkbox-label" for="nature">
+                    <input type="checkbox" id="nature" name="interests" value="nature">
+                    Hiking &amp; Nature
+                </label>
+                <label class="checkbox-label" for="cuisine">
+                    <input type="checkbox" id="cuisine" name="interests" value="cuisine">
+                    Local Cuisine
+                </label>
+            </fieldset>
+
+            <div class="field">
+                <label for="comments">Comments <span class="optional">(Optional)</span></label>
+                <textarea id="comments" name="comments" rows="5"></textarea>
+            </div>
+
+            <input type="submit" value="Submit My Plan">
+        </form>
+    </main>
+    <footer id="site-footer">
+        <p>&copy;<span id="currentyear"></span> Mayan Legacy — Bryan Nuñez</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
